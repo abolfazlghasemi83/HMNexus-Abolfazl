@@ -11,7 +11,7 @@
   <br/><br/>
 
   <a href="https://github.com/Siamak-salimy/HMNexus">
-    <img src="images/logo.ico" alt="Logo" width="80" height="80">
+    <img src="Images/logo.ico" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">HMNexus</h3>
@@ -22,7 +22,7 @@
     <a href="https://siamak-salimy.github.io/HMNexus/"><strong>Explore the Website »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Siamak-salimy/HMNexus/releases">View Demo</a>
+    <a href="https://github.com/Siamak-salimy/HMNexus/releases">View Repositoty</a>
     ·
     <a href="https://github.com/Siamak-salimy/HMNexus/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Report Bug</a>
     ·
@@ -189,7 +189,7 @@ Project Link: [https://github.com/Siamak-salimy/HMNexus](https://github.com/Siam
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: images/project%20snapshot.png
+[product-screenshot]: Images/project%20snapshot.png
 [Python.org]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://python.org
 [Tkinter-shield]: https://img.shields.io/badge/Tkinter-FFD43B?style=for-the-badge&logo=python&logoColor=blue
