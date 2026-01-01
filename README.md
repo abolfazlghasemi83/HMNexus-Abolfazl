@@ -2,130 +2,139 @@
 
 <sup>HMNexus Team</sup>
 
-# 🧬 **HMNexus**
-### *A GUI platform for high-speed, code-free TCGA data download*
+# 🧬 **HMNexus (TCGA-DL)**
+### *A Tkinter GUI platform for high-speed, code-free TCGA data download*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](#-technology--language)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](#-installation--quick-start)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](#technology--language)
+[![GUI](https://img.shields.io/badge/GUI-Tkinter-blue.svg)](#technology--language)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](#installation--quick-start)
 
-🔗 **Project Repository:**  
-```bash
-https://github.com/your-username/TCGA-DL
+🔗 **Project Page & Download:**  
+https://siamak-salimy.github.io/HMNexus/
 
-🔗 Official TCGA Data Portal (GDC):
+🔗 **Official TCGA Data Portal (GDC):**  
 https://portal.gdc.cancer.gov/
 
 </div>
 
-🚀 Announcement
+---
 
-We built a Windows app for TCGA downloads!
+## 🚀 Announcement
 
-Downloading TCGA data used to require command-line tools. But my team and I decided to make life easier: we developed a user-friendly graphical interface so researchers can get the data without any coding!
+We built a **Windows desktop application** for downloading TCGA data.
 
-Special thanks to Siamak Salimi, our team lead, for managing the project and guiding the development. 💡
+Accessing TCGA datasets traditionally required command-line tools and scripting.  
+The **HMNexus Team** designed this application to eliminate that barrier by providing a **fully graphical Tkinter-based interface**, allowing researchers to download TCGA data **with zero coding**.
 
+Special thanks to **Siamak Salimy**, our team lead, for managing the project and guiding the development. 💡
 
-🔗 Download the app here:
+🔗 Download the application:  
 https://siamak-salimy.github.io/HMNexus/
 
-This is the kind of teamwork that turns complex tasks into simple solutions!
+This project demonstrates how teamwork can transform complex bioinformatics workflows into simple, accessible solutions.
 
-Overview
+---
 
-TCGA-DL (HMNexus) is a modern, graphical, and high-performance desktop application for downloading The Cancer Genome Atlas (TCGA) data directly from the NCI Genomic Data Commons (GDC) portal.
+## Overview
 
-Developed by the HMNexus Team, HMNexus provides a fully GUI-based, code-free workflow that eliminates the need for command-line tools or scripting, making large-scale cancer genomics data accessible to biologists, clinicians, and researchers without programming experience.
+**HMNexus (formerly TCGADownloader)** is a modern, open-source, high-performance desktop application for downloading  
+**The Cancer Genome Atlas (TCGA)** data directly from the **NCI Genomic Data Commons (GDC)**.
 
-Note
+Developed using **Python + Tkinter**, HMNexus provides a **code-free, GUI-driven workflow** for manifest-based TCGA downloads, making large-scale cancer genomics data accessible to:
 
-HMNexus is the official project name (previously referred to as TCGADownloader during early development).
+- Biologists  
+- Clinicians  
+- Medical researchers  
+- Students and trainees  
 
-Abstract
+without requiring programming expertise.
 
-Background. The Cancer Genome Atlas (TCGA) is a pivotal resource for cancer genomics, yet its utility can be limited for non-programmers because accessing datasets often requires command-line tools or custom scripting. Although the NCI GDC Data Transfer Tool supports manifest-based downloads, it lacks an integrated graphical client and interactive data exploration.
+---
 
-Results. We present HMNexus, an open-source, Tkinter-based desktop application that combines intuitive graphical dataset browsing with high-performance, manifest-driven downloads from the GDC portal. Users can browse and filter TCGA datasets by cancer type, data category (e.g., gene expression, clinical, methylation), and sample attributes using a point-and-click interface, export or import GDC manifest files, and perform optimized concurrent downloads based on those manifests. Benchmarks on an example BRCA cohort (18.2 GB) show download time reductions of up to ~4.8× compared to sequential command-line approaches under typical default settings. Downloaded files are automatically organized into analysis-ready directory structures.
+## Project Naming
 
-Conclusions. HMNexus bridges the gap between usability and performance, empowering researchers to access TCGA data rapidly and without coding. It is cross-platform, dependency-light (Python 3 + Tkinter), and distributed under the MIT License.
+> **HMNexus** is the official project name.  
+> The tool was previously referred to as **TCGADownloader** during early development.
 
-Key Features
+---
 
-✅ Zero coding required — fully graphical, point-and-click interface
+## Abstract
 
-⚡ High-speed concurrent downloads via GDC manifest-based parallelism
+**Background**  
+The Cancer Genome Atlas (TCGA) is a foundational resource for cancer genomics research. However, downloading TCGA data typically requires command-line tools or scripting, limiting accessibility for non-technical users. While the NCI GDC Data Transfer Tool supports manifest-based downloads, it does not provide a graphical interface or interactive dataset exploration.
 
-🧾 Manifest-driven workflow — import/export and consume GDC manifest files as the authoritative file list
+**Results**  
+We present **HMNexus**, an open-source, Tkinter-based desktop application that integrates intuitive graphical dataset selection with high-speed, manifest-driven downloads from the GDC portal. Users can browse TCGA datasets by cancer type and data category, import or export GDC manifest files, and perform optimized concurrent downloads using a point-and-click interface. Benchmark experiments on a BRCA cohort (18.2 GB) demonstrate up to **4.8× faster** downloads compared to sequential command-line workflows under default settings. Downloaded files are automatically organized into analysis-ready directory structures.
 
-📁 Automatic directory organization into analysis-ready folder hierarchies (e.g., BRCA/clinical/, LUAD/rnaseq/)
+**Conclusions**  
+HMNexus bridges the gap between usability and performance, enabling rapid and effortless TCGA data access. The tool is cross-platform, lightweight (Python 3 + Tkinter), and released under the MIT License.
 
-🔒 MD5 checksum validation for ensuring file integrity after download
+---
 
-🌐 Cross-platform: Windows, macOS, Linux
+## Key Features
 
-📦 Standalone executables available (no Python required for end users)
+- ✅ **Zero coding required** — fully graphical Tkinter interface  
+- ⚡ **High-speed concurrent downloads** using GDC manifest files  
+- 🧾 **Manifest-driven workflow** — import/export official GDC manifests  
+- 📁 **Automatic directory organization** (e.g. `BRCA/clinical/`, `LUAD/rnaseq/`)  
+- 🔒 **MD5 checksum validation** for data integrity  
+- 🌐 **Cross-platform**: Windows, Linux, macOS  
+- 📦 **Standalone executables** available  
+- 🆓 **Open-source** under the MIT License  
 
-🆓 Open-source under the MIT License
+---
 
+## Performance Benchmark (Example)
 
-Performance benchmark (example)
-|                         Tool | Task                                | Time (18.2 GB BRCA cohort) | Coding Required? |
-| ---------------------------: | ----------------------------------- | -------------------------: | :--------------: |
-|                  **HMNexus** | Manifest-driven concurrent download |          **12 min 18 sec** |        No        |
-|       GDC Data Transfer Tool | Default CLI settings                |              58 min 42 sec |        Yes       |
-| TCGAbiolinks (R, sequential) | Single-thread download              |                     54 min |        Yes       |
+| Tool | Interface | Time (18.2 GB BRCA cohort) | Coding Required |
+|----|----|----|----|
+| **HMNexus** | GUI (Tkinter) | **12 min 18 sec** | No |
+| GDC Data Transfer Tool | CLI | 58 min 42 sec | Yes |
+| TCGAbiolinks (R) | Scripted | ~54 min | Yes |
 
+> Performance depends on network bandwidth and system resources.
 
-Note: These benchmark numbers are example results for the specified BRCA cohort. Actual performance varies with network bandwidth, system resources, manifest size, and GDC server behavior / concurrency policies.
+---
 
-How HMNexus works — Technical overview
+## Technology & Language
 
-Dataset selection
+- **Programming language:** Python 3.9+  
+- **GUI framework:** Tkinter  
+- **Download engine:** Manifest-based concurrent HTTP downloads  
+- **Packaging:** PyInstaller  
+- **License:** MIT  
 
-Users can browse TCGA projects and metadata inside the GUI, or use the GDC web portal to build complex queries and export a manifest.
+---
 
-Manifest import/export
+## Installation & Quick Start
 
-HMNexus consumes the GDC manifest (a list of file UUIDs and relative paths) as the authoritative download plan.
+### Option 1 — Standalone Executable (Recommended)
 
-Parallel download engine
+Download and run the executable for your operating system from:
 
-A manifest-driven, multi-process/multi-thread download engine performs concurrent HTTP requests, supports retries, rate/throughput controls, and respects GDC access policies.
+https://siamak-salimy.github.io/HMNexus/
 
-Post-download processing
+No Python installation required.
 
-Files are MD5-verified and moved into a clean directory layout suited for downstream bioinformatics pipelines.
+---
 
-Technology & language
+### Option 2 — Run from Source
 
-Programming language: Python 3.9+
-
-GUI framework: Tkinter
-
-Download engine: Manifest-driven, parallel (multiprocessing / concurrent requests)
-
-Packaging: PyInstaller for standalone executables
-
-License: MIT License
-
-Installation & quick start
-Option 1 — Standalone executable (recommended)
-
-Download the appropriate release for your OS from the Releases page and run the executable (no Python required).
-
-Option 2 — Run from source
 ```bash
-git clone https://github.com/your-username/TCGA-DL.git
+git clone https://github.com/siamak-salimy/TCGA-DL.git
+```
+```bash
 cd TCGA-DL
+```
+```bash
 pip install -r requirements.txt
+```
+```bash
 python main.py
 ```
 
-Official GDC portal (for selection & manifest export)
-https://portal.gdc.cancer.gov/
-
-### Developers (HMNexus Team)
+#### Developers — ( HMNexus Team )
 
 ### Siamak Salimy
 
@@ -137,35 +146,23 @@ https://portal.gdc.cancer.gov/
 
 ## Mahan Mirzade
 
-Usage notes & best practices
 
-Manifest creation: For complex filters (multiple projects, specific sample attributes), we recommend building the manifest in the GDC portal and importing it into HMNexus for download.
 
-Concurrency settings: Adjust the number of concurrent workers according to your network and storage I/O to avoid bottlenecks or GDC throttling.
 
-Data governance: HMNexus does not change file content or access controls; users must comply with GDC data access policies and authorized data usage agreements.
+## Citation
+If you use HMNexus in academic research, please cite:
 
-Reproducibility: Use the exported manifest and organized directory layout as part of reproducible analysis pipelines (e.g., store the manifest with your analysis repository).
+Salimy S., Asgari A., Shahbazi M., Ghasemi A., Mirzade M.
+HMNexus: A Tkinter GUI Platform for High-Speed, Code-Free TCGA Data Download.
+BMC Bioinformatics, 2025.
 
-Acknowledgements
-
-Special thanks to Siamak Salimi, our team lead, for managing the project and guiding the development.
-Thanks also to the GDC team for providing portal and API services, and to all contributors and early testers from the HMNexus development group.
-
-Citation
-
-If you use HMNexus in your research, please cite:
-Salimy S., Asgari A., Shahbazi M., Ghasemi A., Mirzade M. HMNexus: A GUI Platform for High-Speed, Code-Free TCGA Data Download. BMC Bioinformatics (2025).
-
-## License & contact
-
-This project is released under the MIT License. See LICENSE for full terms.
-
+## License
 © 2025 HMNexus Project
+Released under the MIT License.
 
 
-Changelog (short)
+<div align="center">
 
-v1.0.0 — Initial public release: GUI manifest import/export, parallel download engine, MD5 verification, automatic directory organization, standalone executables.
+🧬 HMNexus — Fast. Simple. Reliable TCGA Data Access.
 
-<div align="center"> 🧬 **HMNexus** — *Fast. Simple. Reliable TCGA Data Access.* </div> ```
+</div> ```
