@@ -10,7 +10,7 @@
 
   <br/><br/>
 
-<img src="Images/TCGA_DL.jpg" alt="Logo" width="80" height="80">
+<img src="Images/TCGA_DL.jpg" alt="Logo" width="200" height="200">
 
 
   <h3 align="center">HMNexus</h3>
