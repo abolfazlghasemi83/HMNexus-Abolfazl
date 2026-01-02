@@ -10,9 +10,11 @@
 
   <br/><br/>
 
-  <a href="https://github.com/Siamak-salimy/HMNexus">
-    <img src="src/images/TCGA_DL.jpg" alt="Logo" width="80" height="80">
-  </a>
+ <img src="https://raw.githubusercontent.com/abolfazlghasemi83/HMNexus-Abolfazl/main/src/images/TCGA_DL.jpg"
+     alt="Logo"
+     width="80"
+     height="80">
+
 
   <h3 align="center">HMNexus</h3>
 
