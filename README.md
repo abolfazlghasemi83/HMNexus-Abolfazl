@@ -10,81 +10,164 @@
 
 <img src="Images/TCGA_DL.jpg" alt="HMNexus Logo" width="300"/>
 
-<h1>HMNexus</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HMNexus – GUI for Fast TCGA Data Download</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e0e0e0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      margin: 0 4px;
+    }
+    .highlight {
+      background-color: #fff8e1;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f8ff;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .note {
+      background-color: #e3f2fd;
+      padding: 12px;
+      border-left: 4px solid #2196f3;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
 
-<p><em>A GUI Platform for High-Speed, Code-Free TCGA Data Download</em></p>
+  <header>
+    <h1>HMNexus</h1>
+    <p><em>A GUI Platform for High-Speed, Code-Free TCGA Data Download</em></p>
+    <div>
+      <span class="badge">Python</span>
+      <span class="badge">tkinter</span>
+      <span class="badge">MIT License</span>
+      <span class="badge">Cross-Platform</span>
+    </div>
+    <p>
+      <a href="https://github.com/Siamak-salimy/HMNexus" target="_blank" style="text-decoration: none; background: #3498db; color: white; padding: 8px 16px; border-radius: 4px; display: inline-block; margin-top: 10px;">View on GitHub</a>
+    </p>
+  </header>
 
-<span>Python</span> •
-<span>tkinter</span> •
-<span>MIT License</span> •
-<span>Cross-Platform</span>
+  <div class="note">
+    <strong>Note:</strong> HMNexus is the official name of the tool formerly referred to as "TCGADownloader" in early development.
+  </div>
 
-<br/><br/>
+  <h2>Abstract</h2>
+  <p>
+    <strong>Background:</strong> The Cancer Genome Atlas (TCGA) is a pivotal resource for cancer genomics, yet its utility is limited for non-programmers due to reliance on command-line tools or complex scripting for data download. Although the NCI’s GDC Data Transfer Tool supports manifest-based downloads, it lacks a graphical interface and offers no interactive data exploration.
+  </p>
+  <p>
+    <strong>Results:</strong> We present <strong>HMNexus</strong>, an open-source, tkinter-based desktop application that combines intuitive graphical data selection with high-speed, manifest-driven downloads from the GDC portal. Users can browse and filter TCGA datasets by cancer type, data category (e.g., gene expression, clinical, methylation), and sample attributes through a point-and-click interface, and instantly generate and download data using optimized concurrent HTTP requests based on GDC manifest files. Benchmarks show our tool reduces total download time by up to <span class="highlight">×</span> compared to sequential command-line approaches (e.g., GDC CLI with default settings), while requiring zero coding. Downloaded files are automatically organized into analysis-ready directory structures.
+  </p>
+  <p>
+    <strong>Conclusions:</strong> HMNexus bridges the gap between usability and performance, empowering biologists and clinical researchers to access TCGA data rapidly and effortlessly. It is cross-platform, dependency-light (Python 3 + tkinter), and distributed under the MIT license.
+  </p>
 
-<a href="https://github.com/Siamak-salimy/HMNexus"><strong>View on GitHub</strong></a>
+  <h2>Key Features</h2>
+  <ul>
+    <li>✅ <strong>Zero coding required</strong> – fully graphical interface</li>
+    <li>⚡ <strong>High-speed concurrent downloads</strong> via GDC manifest files</li>
+    <li>🧩 <strong>Interactive filtering</strong> by cancer type, data category, and sample attributes</li>
+    <li>🔒 <strong>MD5 checksum validation</strong> for data integrity</li>
+  </ul>
 
-</div>
+  <h2>Performance Benchmark</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Time (18.2 GB BRCA cohort)</th>
+        <th>Coding Required?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>HMNexus</strong></td>
+        <td><strong>12 min 18 sec</strong></td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>GDC Data Transfer Tool</td>
+        <td>58 min 42 sec</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>TCGAbiolinks (R, sequential)</td>
+        <td>54 min</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
 
----
+  <h2>How to Get Started</h2>
+  <p>Once the first release is published, you will be able to:</p>
+  <ul>
+    <li>Download standalone executables for Windows, macOS, and Linux</li>
+    <li>Run from source using Python 3.9+ and tkinter</li>
+  </ul>
+  <p><em>Check the <a href="https://github.com/Siamak-salimy/HMNexus/releases">Releases</a> page soon!</em></p>
 
-> **Note:**  
-> HMNexus is the official name of the tool formerly referred to as **TCGADownloader** in early development.
+  <h2>Citation</h2>
+  <p>
+    If you use HMNexus in your research, please cite:
+  </p>
+  <blockquote>
+    Salimy, S., Asgari, A., Shahbazi, M., & Ghasemi, A, & Mirzade,M. HMNexus: A GUI Platform for High-Speed, Code-Free TCGA Data Download. <em>BMC Bioinformatics</em> (2025).
+  </blockquote>
 
----
+  <footer>
+    <p>© 2025 HMNexus Project | MIT License | 
+      <a href="mailto:siamak.salimy@email.com">Contact</a>
+    </p>
+  </footer>
 
-## Abstract
-
-**Background:**  
-The Cancer Genome Atlas (TCGA) is a pivotal resource for cancer genomics, yet its practical use remains challenging for non-programmers due to reliance on command-line tools and scripting-based workflows. Although the NCI GDC Data Transfer Tool supports manifest-based downloads, it lacks a graphical interface and interactive data selection.
-
-**Results:**  
-We present **HMNexus**, an open-source, tkinter-based desktop application that enables intuitive graphical selection and high-speed, manifest-driven downloads from the GDC portal. Users can browse TCGA datasets by cancer type, data category (e.g., gene expression, clinical, methylation), and sample attributes through a point-and-click interface. HMNexus employs optimized concurrent HTTP requests based on GDC manifest files, achieving up to **4.8× faster** downloads compared to sequential command-line approaches, while requiring zero coding. Downloaded data are automatically organized into analysis-ready directory structures.
-
-**Conclusions:**  
-HMNexus bridges the gap between usability and performance, empowering biologists and clinical researchers to access TCGA data rapidly and effortlessly. The tool is cross-platform, dependency-light (Python 3 + tkinter), and distributed under the MIT license.
-
----
-
-## Key Features
-
-- ✅ **Zero coding required** — fully graphical user interface  
-- ⚡ **High-speed concurrent downloads** via GDC manifest files  
-- 🧩 **Interactive filtering** by cancer type, data category, and sample attributes  
-- 🔒 **MD5 checksum validation** for data integrity  
-
----
-
-## Performance Benchmark
-
-| Tool | Time (18.2 GB BRCA cohort) | Coding Required? |
-|---|---|---|
-| **HMNexus** | **12 min 18 sec** | No |
-| GDC Data Transfer Tool | 58 min 42 sec | Yes |
-| TCGAbiolinks (R, sequential) | ~54 min | Yes |
-
----
-
-## How to Get Started
-
-Once the first release is published, you will be able to:
-
-- Download standalone executables for **Windows**, **macOS**, and **Linux**
-- Run from source using **Python 3.9+** and **tkinter**
-
-👉 Check the **Releases** page soon:  
-https://github.com/Siamak-salimy/HMNexus/releases
-
----
-
-## Citation
-
-If you use HMNexus in your research, please cite:
-
-> Salimy, S., Asgari, A., Shahbazi, M., Ghasemi, A., & Mirzadeh, M.  
-> **HMNexus: A GUI Platform for High-Speed, Code-Free TCGA Data Download.**  
-> *BMC Bioinformatics* (2025).
-
----
-
-© 2025 HMNexus Project — MIT License  
-📧 Contact: siamak.salimy@email.com
+</body>
+</html>
