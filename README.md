@@ -10,7 +10,8 @@
 
   <br/><br/>
 
- <img src="https://raw.githubusercontent.com/abolfazlghasemi83/HMNexus-Abolfazl/main/src/images/TCGA_DL.jpg"
+ <img src="<img src="Images/TCGA_DL.jpg" alt="Logo" width="80" height="80">
+"
      alt="Logo"
      width="80"
      height="80">
